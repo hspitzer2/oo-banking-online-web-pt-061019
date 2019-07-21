@@ -8,7 +8,7 @@ class Transfer
     @sender = sender
     @receiver = receiver
     @status = "pending"
-    @amount = 50
+    @amount = amount
   end
 
   def valid?
@@ -17,15 +17,16 @@ class Transfer
 
 
 
-  def execute_transaction
+def execute_transaction
     if self.valid? && self.status != "complete"
       @sender.balance -= @amount
       @receiver.balance += @amount
     self.status = "complete"
-    end
-
+    
+     @sender == !valid 
   end
 
 end
   # def reverse_transfer
+    if transefer == transfer
   # end
