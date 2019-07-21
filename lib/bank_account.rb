@@ -6,7 +6,7 @@ require 'pry'
 
    def initialize(name)
      @name = name
-     @balance = balance
+     @balance = 1000
      @status = "open"
      @account = []
      @balance = balance
