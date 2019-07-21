@@ -32,8 +32,7 @@ def execute_transaction
     if self.valid? && self.status != "complete" && sender.balance >= self.amount
       @sender.balance += @amount
       @receiver.balance -= @amount
-
-     self.status = "reversed"
+      self.status = "reversed"
    end
   end
 end
