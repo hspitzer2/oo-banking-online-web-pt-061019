@@ -21,9 +21,9 @@ def execute_transaction
     if self.valid? && self.status != "complete"
       @sender.balance -= @amount
       @receiver.balance += @amount
-    self.status = "complete"
-
-     @sender == !valid
+     self.status = "complete"
+   else
+     self.status = "rejected"
   end
 
 end
