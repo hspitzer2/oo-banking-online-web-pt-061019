@@ -34,4 +34,5 @@ def execute_transaction
       @receiver.balance -= @amount
      self.status = "reversed"
       end
+    end
 end
